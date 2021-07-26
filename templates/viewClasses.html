@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block container %}
+  <br>
+    
+  <form method = "get">
+    <fieldset>
+    <legend>Current Classes:</legend>
+      <table border='1'>
+
+        <thead>
+            <th>Class Name</th>
+            <th>Stat Name</th>
+            <th>Stat Bonus</th>
+            <th>Update Class</th>
+            <th>Delete Class</th>
+        </thead>
+
+        <tbody>
+          {% for r in rows %}
+          <tr>
+            <td> {{ r[0] }}</td>
+            <td> {{ r[1] }}</td>
+            <td> {{ r[2] }}</td>
+            <td> <input type='button' name='Update' value='Update'onclick="window.location = '/updateClass/{{r[3]}}'"> </td>
+            <td> <input type='button' name='Delete' value='Delete' onclick="window.location = '/deleteClass/{{r[3]}}'"> </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+     
+      </table>
+    </fieldset>
+  </form>
+
+  <br>
+
+{% endblock %}

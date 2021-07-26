@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+    <form method="post" action="/searchForGuild">
+
+    	<legend>Search For Guilds</legend>
+
+       <input type="text" placeholder="Search by Guild Name" name="g_name">
+       <input type="submit" value="Submit">
+
+    </form>
+
+    <p></p>
+
+{% endblock %}

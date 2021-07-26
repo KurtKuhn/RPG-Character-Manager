@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block container %}
+  <br>
+
+  <form method = "post" id= "updateSchool" action="/updateSchool/{{school[0]}}">
+    <fieldset>
+
+      <legend>Update School Here:</legend>
+
+      <input type="hidden" name="school_id" value="{{school[0]}}">
+
+      <label> School Name: <input type ="text" name ="school_name" value="{{school[1]}}" maxlength="255"> </label>
+
+      <br/><br/>
+
+      <label> School Description: <input type ="text" name ="school_description" value="{{school[2]}}" maxlength="255" size="100"></label>
+
+      <br/><br/>
+
+      <input type="submit" value="Submit">
+      
+    </fieldset>
+  </form>
+
+  <br>
+
+
+{% endblock %}

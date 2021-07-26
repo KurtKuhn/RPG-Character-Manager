@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<br>
+
+    <form method="post" action="/searchForClass">
+
+       <input type="text" placeholder="Search by Class Name" name="c_name">
+       <input type="submit" value="Submit">
+
+    </form>
+
+<p></p>
+
+{% endblock %}

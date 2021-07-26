@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+  <form method = "get">
+    
+    <fieldset>
+    
+    <legend>Current Spells</legend>
+
+      <table border='1'>
+        <thead>
+            <th>Spell Name</th>
+            <th>Spell Description</th>
+            <th>Spell Level</th>
+            <th>Spell School</th>
+            <th>Update Spells</th>
+            <th>Delete Spells</th>
+        </thead>
+
+        <tbody>
+          {% for r in rows %}
+          <tr>
+            <td> {{ r[0] }}</td>
+            <td> {{ r[1] }}</td>
+            <td> {{ r[2] }}</td>
+            <td> {{ r[3] }}</td>
+            <td> <input type='button' name='Update' value='Update' onclick="window.location = '/updateSpell/{{r[4]}}'"> </td>
+            <td> <input type='button' name='Delete' value='Delete' onclick="window.location = '/deleteSpell/{{r[4]}}'"> </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+
+      </table>
+   </fieldset>
+ </form>
+ <br>
+  
+{% endblock %}

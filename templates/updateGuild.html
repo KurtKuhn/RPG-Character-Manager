@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block container %}
+  <br>
+
+  <form method = "post" id= "updateGuild" action="/updateGuild/{{guild[0]}}">
+    <fieldset>
+
+      <legend>Update Guild Here:</legend>
+
+      <input type="hidden" name="guild_id" value="{{guild[0]}}">
+
+      <label> Guild Name: <input type ="text" name ="guild_name" value="{{guild[1]}}" maxlength="255"> </label>
+
+      <br/><br/>
+
+      <label> Guild Description: <input type ="text" name ="guild_description" value="{{guild[2]}}" maxlength="255"></label>
+
+      <br/><br/>
+
+      <input type="submit" value="Submit">
+      
+    </fieldset>
+  </form>
+
+  <br><br>
+
+{% endblock %}

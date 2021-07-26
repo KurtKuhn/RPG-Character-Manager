@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block container %}
+ 
+
+    <form method="post" action="/search">
+
+    	<legend>Search For Character (First Name Only):</legend>
+
+       <input type="text" placeholder="Search by First Name" name="f_name">
+       <input type="submit" value="Submit">
+    
+
+    </form>
+
+    <p></p>
+
+{% endblock %}

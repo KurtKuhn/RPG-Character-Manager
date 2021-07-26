@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+
+  <br>
+
+  <form method = "post" id= "updateSpells" action="/updateSpell/{{spell[0]}}">
+    <fieldset>
+
+      <legend>Update Spell Here:</legend>
+
+      <input type="hidden" name="spell_id" value="{{spell[0]}}">
+
+      <label> Spell Name:<input type ="text" name ="spell_name" value="{{spell[1]}}" maxlength="255"> </label>
+
+      <br><br>
+
+      <label> Spell Level: <input type ="number" name ="spell_level" value="{{spell[2]}}" min="0" max="20"> </label>
+
+      <br><br>
+
+      <label>Spell Description: <input type ="text" name ="spell_description" value="{{spell[3]}}" size="50" maxlength="255"></label>
+
+      <br><br>
+
+      <label>Spell School: </label>
+
+      <select name= "spellSchool" value ="{{spell[4]}}">
+
+              {% for ss in spellSchool %}
+                <option value="{{ ss[0] }}" > {{ ss[1] }}</option>
+              {% endfor %}
+                <option value="noSchool"> No School</option>
+          </select>
+
+      <br>
+
+      <input type="submit" value="Submit">
+
+    </fieldset>
+  </form>
+
+  <br><br>
+
+{% endblock %}

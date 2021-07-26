@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+    <form method = "get">
+        <fieldset>
+        <legend>Current Schools:</legend>
+
+            <table border='1'>
+              <thead>
+                  <th>School Name</th>
+                  <th>School Description</th>
+              </thead>
+
+              <tbody>
+                {% for r in rows %}
+                <tr>
+                  <td> {{ r[0] }}</td>
+                  <td> {{ r[1] }}</td>
+                  <td> <input type='button' name='Update' value='Update' onclick="window.location = '/updateSchool/{{r[2]}}'"> </td>
+                  <td> <input type='button' name='Delete' value='Delete' onclick="window.location = '/deleteSchool/{{r[2]}}'"> </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+        </fieldset>
+    </form>
+
+    <br>
+
+{% endblock %}

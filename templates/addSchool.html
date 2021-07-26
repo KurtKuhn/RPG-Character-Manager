@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+    <form action = '/addSchool' method = "post">
+
+        <legend>Add School:</legend>
+        
+        <label> School Name: <input type ="text" name ="schoolName" maxlength="255"> </label>
+        
+        <br/><br/>
+
+        <label> School Description: <input type ="text" name ="schoolDescription" maxlength="255"></label>
+
+        <br></br>
+
+        <input type="submit" value="Add School">
+
+    </form>
+
+{% endblock %}

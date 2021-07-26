@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    	<meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        
+        <title> 
+
+            {% if title is defined %}
+                 {{ title }}
+        
+            {% else %}
+                variable is not defined
+            
+            {% endif %}
+
+        </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+    </head>
+
+    <body>
+    	<nav class="navbar bg-dark navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="/index">Character Manager</a>
+          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/index">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/addCharacter">Add Character</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewCharacters">View/Manage Characters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/searchCharacters">Search Characters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/addClass">Add Class</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewClasses">View/Manage Classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/searchClasses">Search Classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/addGuild">Add Guild</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewGuilds">View/Manage Guilds</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/searchGuilds">Search Guilds</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/addSpell">Add Spell</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewSpells">View/Manage Spells</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/searchSpells">Search Spells</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/addSchool">Add School</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewSchools">View/Manage Schools</a>
+                </li>
+              </ul>
+            </div>
+        </nav> 
+    </body>
+    <br>
+    {% block container %}{% endblock %}
+</html>

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block container %}
+ 
+    <form action = '/addSpell' method = "post">
+    			
+        <legend>Add Spell</legend>
+        
+        <label>Spell Name: <input type ="text" name ="spellName" size="20" maxlength="255">
+
+        <br/><br/>
+        
+        <label>Spell Level: <input type ="number" name ="spellLevel" size="20" min="1" max="20">
+      
+        <br/><br/>
+
+        <label>Spell Description: <input type ="text" name ="spellDescription" size="20" maxlength="255">
+        
+        <br></br>
+
+        <label>Select Spell School: </label>
+                
+        <select name= "schools">
+                {% for s in schools %}
+                  <option value="{{ s[0] }}" > {{ s[1] }}</option>
+                {% endfor %}
+                <option value="noSchool"> No School </option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="Add Spell">
+
+    </form>
+
+    <br>
+
+{% endblock %}

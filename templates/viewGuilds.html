@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<br>
+
+<form method = "get">
+    <fieldset>
+    <legend>View Current Guilds Here:</legend>
+      <table border='1'>
+
+        <thead>
+            <th>Guild Name</th>
+            <th>Guild Description</th>
+            <th>Update Guild</th>
+            <th>Delete Guild</th>
+        </thead>
+
+        <tbody>
+          {% for r in rows %}
+          <tr>
+            <td> {{ r[0] }}</td>
+            <td> {{ r[1] }}</td>
+            <td> <input type='button' name='Update' value='Update' onclick="window.location = '/updateGuild/{{r[2]}}'"> </td>
+            <td> <input type='button' name='Delete' value='Delete' onclick="window.location = '/deleteGuild/{{r[2]}}'"> </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      
+      </table>
+    </fieldset>
+  </form>
+  <br>
+  
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block container %}
+    <br>
+
+    <form method="post" action="/searchForSpells">
+
+    	<legend>Search For Spell</legend>
+
+       <input type="text" placeholder="Search by Spell Name" name="s_name">
+       <input type="submit" value="Submit">
+    </form>
+
+    <br>
+
+{% endblock %}

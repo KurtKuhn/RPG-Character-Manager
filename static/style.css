@@ -1,0 +1,19 @@
+form {
+    border: solid;
+    margin: 25px;
+    width: 66%;
+    padding: 25px;
+    text-align: left;
+}
+
+ .container .textInput {
+    width: 50%;
+    display: float;
+    text-align: left;
+}
+
+.container .numInput{
+    width:10%;
+    display: float;
+    text-align: right; 
+}

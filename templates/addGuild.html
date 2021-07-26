@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+
+<form action = '/addGuild' method = "post">
+
+    <legend>Add Guild</legend>
+    
+    <label> Guild Name: <input type ="text" name ="guildName" maxlength="255"> </label>
+    
+    <br/><br/>
+
+    <label> Guild Description: <input type ="text" name ="guildDescription" maxlength="255"></label>
+
+    <br></br>
+
+    <input type="submit" value="Add Guild">
+
+</form>
+
+<br>
+
+{% endblock %}

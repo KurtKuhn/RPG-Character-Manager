@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+
+  <form method = "get" action ="/searchForSpells">
+    <fieldset>
+    <legend>Search Results:</legend>
+    <table border='1'>
+      <thead>
+          <th>Spell Name</th>
+          <th>Spell Description</th>
+          <th>Spell Level</th>
+      </thead>
+      <tbody>
+        {% for r in rows %}
+        <tr>
+          <td> {{ r[0] }}</td>
+          <td> {{ r[1] }}</td>
+          <td> {{ r[2] }}</td>
+          <td> <input type='button' name='Update' value='Update' onclick="window.location = '/updateSpell/{{r[3]}}'"> </td>
+          <td> <input type='button' name='Delete' value='Delete' onclick="window.location = '/deleteSpell/{{r[3]}}'"> </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p></p>
+  
+{% endblock %}
